@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [EventController::class, 'index'])->name('welcome');
 Route::get('/events/create', [EventController::class, 'create'])->name('event-create');
+Route::post('/events', [EventController::class, 'store'])->name('event-store');

@@ -18,4 +18,26 @@ class EventController extends Controller
     {
         return view('events.create');
     }
+
+
+    /**
+     * Store a new event
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+
+        $event = new Event;
+
+        $event->title = $request->input('title');
+        $event->city = $request->input('city');
+        $event->private = $request->input('private');
+        $event->description = $request->input('description');
+
+        $event->save();
+
+        return redirect('/');
+    }
 }
