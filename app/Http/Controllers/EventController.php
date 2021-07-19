@@ -35,6 +35,7 @@ class EventController extends Controller
         $event->city = $request->input('city');
         $event->private = $request->input('private');
         $event->description = $request->input('description');
+        $event->items = $request->input('items');
 
         //image upload
         if ($request->hashFile('image') && $request->file('image')->isValid()) {
