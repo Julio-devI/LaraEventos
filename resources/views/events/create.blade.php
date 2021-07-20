@@ -63,6 +63,9 @@
             <label for="image"> Imagem do Evento </label> 
             <input type="file" id="image" name="image" class="from-control-file">
         </div>
+
+        <input type="submit" class="btn btn-primary" value="Criar Evento">
+
     </form>                         
 </div>
 @endsection
