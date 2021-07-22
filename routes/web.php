@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [EventController::class, 'index'])->name('welcome');
-Route::get('/events/create', [EventController::class, 'create'])->name('event-create');
+Route::get('/events/create', [EventController::class, 'create'])->middleware('auth')->name('event-create');
 Route::get('/events/{id}', [EventController::class, 'show'])->name('event-show');
 Route::post('/events', [EventController::class, 'store'])->name('event-store');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
