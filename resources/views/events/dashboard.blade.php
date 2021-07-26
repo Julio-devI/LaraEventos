@@ -13,11 +13,10 @@
             <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
+                            <th scope="col"> Id do Evento</th>
                             <th scope="col"> Nome </th>
                             <th scope="col"> Participantes </th>
                             <th scope="col"> Ações </th>
-                            <th scope="col">#</th>
                         </tr>
                     </thead>
                 <tbody>
