@@ -81,7 +81,7 @@ class EventController extends Controller
 
         if ($user) {
 
-            $userEvents = $user->eventsAsParticipant->toArray();
+            $userEvents = $user->participants->toArray();
 
             foreach ($userEvents as $userEvent) {
                 if ($userEvent['id'] == $id) {
